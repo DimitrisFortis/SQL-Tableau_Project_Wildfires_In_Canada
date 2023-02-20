@@ -160,7 +160,7 @@ FROM canwildfireslocdate;
 
 
 ### Populate "Territories" column on the "canwildfireslocdate" table 
-#### (We have some EMPTY values in this column, specifically in the "British Columbia" and "Saskatchewan" Territories)
+#### We have some EMPTY values in this column, specifically in the "British Columbia" and "Saskatchewan" Territories
 
 
 *-- After experiencing errors with the datatype of "latitude" and "longitude" columns and the null values in the "rep_date" column, we have to proceed*
