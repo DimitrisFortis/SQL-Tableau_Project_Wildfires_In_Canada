@@ -133,13 +133,9 @@ ON Dupls.FID = can.FID
 WHERE Dupls.row_num > 1 AND can.Nos < Dupls.Nos;
 
 -- DELETE can.*
-
 -- FROM canwildfiresinfo AS can
-
 -- JOIN Dupls
-
 -- ON Dupls.FID = can.FID
-
 -- WHERE Dupls.row_num > 1 AND can.Nos < Dupls.Nos; 
 ```
 
