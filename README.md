@@ -27,9 +27,9 @@ The Dataset was modified for the purpose of the Part 1:
 
 The final two .csv  files used:
 
-[4.1 CanWildfiresInfo](4.1%20CanWildfiresInfo.csv)
+[4.1 CanWildfiresInfo](.csv%20files%20used/4.1%20CanWildfiresInfo.csv)
 
-[4.2 CanWildfiresLocDate](4.2%20CanWildfiresLocDate.csv)
+[4.2 CanWildfiresLocDate](.csv%20files%20used/4.2%20CanWildfiresLocDate.csv)
 
 # Entity Relationship Diagram
 
