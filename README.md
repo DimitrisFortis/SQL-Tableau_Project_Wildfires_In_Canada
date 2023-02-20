@@ -15,9 +15,9 @@ https://public.tableau.com/views/Wildfires_In_Canada/Wildfires_In_Canada?:langua
 The Dataset Source: 
 https://www.kaggle.com/datasets/ulasozdemir/wildfires-in-canada-19502021
 
-The modified excel file used: 
+The Dataset was modified for the purpose of the Part 1: 
 
-2. CANADA_WILDFIRES_MODIFIED.xlsx
+2. CANADA_WILDFIRES_MODIFIED.csv (in .rar format)
 
 The final two .csv  files used:
 
