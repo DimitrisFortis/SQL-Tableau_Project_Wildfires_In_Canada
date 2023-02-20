@@ -8,7 +8,6 @@ FROM canwildfireslocdate
 GROUP BY PROV_TERRIT
 ORDER BY 2 DESC;
 
-> ![1 The 10 Territories with the most wildfires (1950-2021)](https://user-images.githubusercontent.com/123563233/220166706-d09b1dc5-96d1-4f23-9463-a260647ae25c.png)
 
 -- Annual shift of No of fires in 'British Columbia'
 SELECT 
