@@ -5,6 +5,8 @@ A Data Analysis process using SQL & Tableau on the dataset "Wildfires in Canada 
 
 Part 1: Data Cleaning using MySQL Workbench 
 
+https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/Part_1_Data_Cleaning_Wildfires_in_Canada
+
 Part 2: Data Exploration using MySQL Workbench
 
 Part 3: Visualization using Tableau Dekstop/Public
