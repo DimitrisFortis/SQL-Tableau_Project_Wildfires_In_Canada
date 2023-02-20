@@ -5,11 +5,11 @@ A Data Analysis process using SQL & Tableau on the dataset "Wildfires in Canada 
 
 Part 1: Data Cleaning using MySQL Workbench 
 
-[Part_1_Data_Cleaning_Wildfires_in_Canada](Part_1_Data_Cleaning_Wildfires_in_Canada)
+[Part_1_Data_Cleaning_Wildfires_in_Canada](Part_1_Data_Cleaning_Wildfires_in_Canada.md)
 
 Part 2: Data Exploration using MySQL Workbench
 
-[Part_2_Data_Exploration_Wildfires_in_Canada](Part_2_Data_Exploration_Wildfires_in_Canada)
+[Part_2_Data_Exploration_Wildfires_in_Canada](Part_2_Data_Exploration_Wildfires_in_Canada.md)
 
 Part 3: Visualization using Tableau Dekstop/Public
 
