@@ -23,7 +23,7 @@ https://www.kaggle.com/datasets/ulasozdemir/wildfires-in-canada-19502021
 
 The Dataset was modified for the purpose of the Part 1: 
 
-[2. CANADA_WILDFIRES_MODIFIED](2.%20CANADA_WILDFIRES_MODIFIED.rar) (in .rar format)
+[2. CANADA_WILDFIRES_MODIFIED](.csv files used/2.%20CANADA_WILDFIRES_MODIFIED.rar) (in .rar format)
 
 The final two .csv  files used:
 
