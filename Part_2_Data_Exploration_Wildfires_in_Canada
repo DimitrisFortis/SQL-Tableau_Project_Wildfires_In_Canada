@@ -10,10 +10,11 @@ ORDER BY 2 DESC;
 
 ![This is an image](https://user-images.githubusercontent.com/123563233/220171351-f47f8439-72b6-4913-9f95-e4dace829a56.png)
 
-![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1.%20The%2010%20Territories%20with%20the%20most%20wildfires%20(1950-2021).png?raw=true)
+![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1. The 10 Territories with the most wildfires (1950-2021).png)
 
-![This is an image](https://raw.githubusercontent.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/main/images/1.%20The%2010%20Territories%20with%20the%20most%20wildfires%20(1950-2021).png?token=GHSAT0AAAAAAB55KIY4OTE5SOV2ILQ7G4USY7TWKVQ)
+![Highest monthly crimes reported Chart](https://github.com/iweld/chicago_crime_and_weather_2021/blob/main/img/line_mild_to_cold.PNG)
 
+![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1_The_10_Territories_with_the_most_wildfires_1950-2021.png?raw=true)
 -- Annual shift of No of fires in 'British Columbia'
 SELECT 
     can1.YEAR, 
