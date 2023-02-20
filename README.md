@@ -1,7 +1,7 @@
 # SQL/Tableau_Project_Wildfires_In_Canada
 
 # Introduction
-A SQL Analysis on Wildfires in Canada between 1950-2021
+A Data Analysis process using SQL & Tableau on the dataset "Wildfires in Canada between 1950-2021"
 
 Part 1: Data Cleaning using MySQL Workbench 
 
