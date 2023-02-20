@@ -8,13 +8,15 @@ FROM canwildfireslocdate
 GROUP BY PROV_TERRIT
 ORDER BY 2 DESC;
 
-![This is an image](https://user-images.githubusercontent.com/123563233/220171351-f47f8439-72b6-4913-9f95-e4dace829a56.png)
-
 ![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1. The 10 Territories with the most wildfires (1950-2021).png)
 
 ![Highest monthly crimes reported Chart](https://github.com/iweld/chicago_crime_and_weather_2021/blob/main/img/line_mild_to_cold.PNG)
 
 ![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1_The_10_Territories_with_the_most_wildfires_1950-2021.PNG)
+
+![Alt+Text](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1_The_10_Territories_with_the_most_wildfires_1950-2021.png?raw=true)
+
+![1_The_10_Territories_with_the_most_wildfires_1950-2021](https://user-images.githubusercontent.com/123563233/220177003-f98415c6-8acc-4efe-9e98-e8ca4c1776a4.png)
 
 -- Annual shift of No of fires in 'British Columbia'
 SELECT 
