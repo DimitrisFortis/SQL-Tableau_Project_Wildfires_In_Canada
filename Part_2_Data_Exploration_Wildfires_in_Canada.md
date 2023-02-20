@@ -1,24 +1,25 @@
--- DATA EXPLORATION
+### DATA EXPLORATION
 
 
 
--- Total Number of wildfires per province/territory (Which provinces/territories have the highest number of wildfires?)
+#### Total Number of wildfires per province/territory (Which provinces/territories have the highest number of wildfires?)
+
+```
 SELECT PROV_TERRIT, COUNT(PROV_TERRIT) AS NO_OF_WILDFIRES_PERTERR
 FROM canwildfireslocdate
 GROUP BY PROV_TERRIT
 ORDER BY 2 DESC;
-
-![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1. The 10 Territories with the most wildfires (1950-2021).png)
-
-![Highest monthly crimes reported Chart](https://github.com/iweld/chicago_crime_and_weather_2021/blob/main/img/line_mild_to_cold.PNG)
-
-![This is an image](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1_The_10_Territories_with_the_most_wildfires_1950-2021.PNG)
+```
+![Alt+Text](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1.%20The%2010%20Territories%20with%20the%20most%20wildfires%20(1950-2021).png)
 
 ![Alt+Text](https://github.com/Dimitris-Frt/SQL_Project_Wildfires_In_Canada/blob/main/images/1_The_10_Territories_with_the_most_wildfires_1950-2021.png?raw=true)
 
 ![1_The_10_Territories_with_the_most_wildfires_1950-2021](https://user-images.githubusercontent.com/123563233/220177003-f98415c6-8acc-4efe-9e98-e8ca4c1776a4.png)
 
--- Annual shift of No of fires in 'British Columbia'
+
+#### Annual shift of No of fires in 'British Columbia'
+
+```
 SELECT 
     can1.YEAR, 
     ((can1.count_fires - can2.count_fires) / can2.count_fires) * 100 AS ANNUAL_CHANGE 
@@ -47,64 +48,80 @@ JOIN (
 ON can1.YEAR = can2.YEAR - 1
 ORDER BY 
     can1.YEAR DESC;
+```
 
+#### Percentage of wildfires per province/territory (Likelihood of wildfire per province/territory)
 
--- Percentage of wildfires per province/territory (Likelihood of wildfire per province/territory)
+```
 SELECT PROV_TERRIT, (COUNT(PROV_TERRIT) / (SELECT COUNT(*) FROM canwildfireslocdate)*100) AS PERCENTAGE_OF_WILDFIRES_PERTERR
 FROM canwildfireslocdate
 GROUP BY PROV_TERRIT
 ORDER BY 2 DESC;
+```
 
+#### Total Number of wildfires per year (What is the overall trend in the number of wildfires over time?)
 
--- Total Number of wildfires per year (What is the overall trend in the number of wildfires over time?)
+```
 SELECT YEAR(REP_DATE) AS YEAR, COUNT(YEAR(REP_DATE)) AS NO_OF_WILDFIRES_PERY
 FROM canwildfireslocdate
 GROUP BY YEAR(REP_DATE)
 ORDER BY 1 DESC;
+```
 
+#### Percentage of wildfires per year
 
--- Percentage of wildfires per year
+```
 SELECT YEAR(REP_DATE) AS YEAR, (COUNT(YEAR(REP_DATE)) / (SELECT COUNT(*) FROM canwildfireslocdate)*100) AS PERCENTAGE_OF_WILDFIRES_PERY
 FROM canwildfireslocdate
 GROUP BY YEAR(REP_DATE)
 ORDER BY 1 DESC;
+```
 
+#### Total Number of wildfires per month (Which month is the most dangerous, based on No. of wildfires)
 
--- Total Number of wildfires per month (Which month is the most dangerous, based on No. of wildfires)
+```
 SELECT MONTH(REP_DATE) AS MONTH, COUNT(MONTH(REP_DATE)) AS NO_OF_WILDFIRES_PERM
 FROM canwildfireslocdate
 GROUP BY MONTH(REP_DATE)
 ORDER BY 2 DESC;
+```
 
+#### Total area burnt per province/territory (Which provinces/territories have the highest areas burnt from wildfires?)
 
--- Total area burnt per province/territory (Which provinces/territories have the highest areas burnt from wildfires?)
+```
 SELECT can_ld.PROV_TERRIT, SUM(can_info.SIZE_HA) AS AREA_BURNT_PERTERR
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
 ON can_ld.FID = can_info.FID
 GROUP BY can_ld.PROV_TERRIT
 ORDER BY 2 DESC;
+```
 
+#### Percentage of area burnt per province/territory
 
--- Percentage of area burnt per province/territory
+```
 SELECT can_ld.PROV_TERRIT, (SUM(can_info.SIZE_HA) / (SELECT SUM(SIZE_HA) FROM canwildfiresinfo)*100) AS PERCENTAGE_OF_AREA_BURNT_PERTERR
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
 ON can_ld.FID = can_info.FID
 GROUP BY can_ld.PROV_TERRIT
 ORDER BY 2 DESC;
+```
 
+#### How has the amount of hectares burnt changed over time?
 
--- How has the amount of hectares burnt changed over time?
+```
 SELECT SUM(can_info.SIZE_HA) AS AREA_BURNT_PERY, YEAR(can_ld.REP_DATE) AS YEAR_OF_WILDFIRE
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
 ON can_ld.FID = can_info.FID
 GROUP BY YEAR(can_ld.REP_DATE)
 ORDER BY 2 DESC;
+```
 
+#### What is the average size of wildfires in each province/territory?
 
--- What is the average size of wildfires in each province/territory?
+```
 SELECT can_ld.PROV_TERRIT, AVG(can_info.SIZE_HA) AS AVERAGE_AREA_BURNT_PERTERR
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
@@ -112,25 +129,31 @@ ON can_ld.FID = can_info.FID
 WHERE YEAR(can_ld.REP_DATE) <> 0
 GROUP BY can_ld.PROV_TERRIT
 ORDER BY 2 DESC;
+```
 
+#### Highest area burnt per province/territory and which year that wildfire happened
 
--- Highest area burnt per province/territory and which year that wildfire happened
+```
 SELECT can_ld.PROV_TERRIT, MAX(can_info.SIZE_HA) AS HIGHEST_AREA_BURNT_PERTERR, YEAR(can_ld.REP_DATE) AS YEAR_OF_WILDFIRE
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
 ON can_ld.FID = can_info.FID
 GROUP BY can_ld.PROV_TERRIT, YEAR(can_ld.REP_DATE)
 ORDER BY 2 DESC;
+```
 
+#### What is the most common cause of wildfires?
 
--- What is the most common cause of wildfires?
+```
 SELECT CAUSE, COUNT(CAUSE) AS NUMBER_OF_OCCURRENCIES, (COUNT(CAUSE) / (SELECT COUNT(*) FROM canwildfiresinfo))*100 AS PERCENTAGE_OF_EACH_CAUSE
 FROM canwildfiresinfo
 GROUP BY CAUSE
 ORDER BY 3 DESC;
+```
 
+#### Is there a relationship between the cause of the wildfires and the location or size of the area burnt?
 
--- Is there a relationship between the cause of the wildfires and the location or size of the area burnt?
+```
 SELECT can_info.CAUSE, can_ld.PROV_TERRIT, SUM(can_info.SIZE_HA) AS AREA_BURNT_HA
 FROM canwildfireslocdate AS can_ld
 JOIN canwildfiresinfo AS can_info
@@ -138,3 +161,4 @@ ON can_ld.FID = can_info.FID
 WHERE CAUSE <> 'DO_NOT_KNOW'
 GROUP BY can_info.CAUSE, can_ld.PROV_TERRIT
 ORDER BY 1,2,3 DESC;
+```
